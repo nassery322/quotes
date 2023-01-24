@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <style>*{
+        background-color: black; 
+        color: white; 
+        font-family: 'Advent Pro', sans-serif;
+        
+        
+     }
+     html{
+         scroll-behavior:smooth;
+     }
+     @keyframes anime1 {
+        from{right:350px}
+        to{right: 0px;}
+         
+     }
+     @keyframes anime2 {
+         from{left:350px}
+         to{left: 0px;}
+          
+      }
+      @keyframes anime3 {
+         from{color: white;}
+         to{color:yellow}
+      }
+     .nav{width: 100%; height: 120px;
+         
+     }
+     .nav .nav-content{
+     
+     }
+     .nav-content ul {list-style-type: none; 
+         margin-right: 90px; 
+     }
+     .nav-content ul li a{ 
+         text-decoration: none; list-style-type: none; 
+          font-size: 2.5em; margin: 40px;
+          display: block; float: right; letter-spacing: 5px;  
+     }
+     
+     .nav-content ul li a:hover{
+         color:rgb(127, 220, 145); 
+     }
+     @media screen and (max-width:1472px){
+         .fa-angle-down{display: block !important;}
+         .fa-angle-up{display: block !important;}
+         .fa-angle-right{display: none !important;}
+         .fa-angle-left{display: none !important;}
+         #quote-content{height: 300px !important; max-width: 600px !important;}
+         .brain{border-left:1px solid white; }
+         .space{display: block !important;}
+         #categories{height: 1200px !important;}
+         
+         
+     }
+     @media screen and (max-width:1396px){
+         .clicked{max-height: 2000px !important;}
+     }
+     @media screen and (max-width:1095px){
+         .nav-content{display: none !important;}
+         #navbar2{display: block !important;}
+         .art{border-left:1px solid white;}
+         
+     }
+     @media screen and (max-width:1050px) {
+         .clicked{max-height: 2200px !important;}
+     }
+     
+     @media screen and (max-width:950px){
+         .nav{height: 250px;}
+         .clicked{max-height: 2400px !important;}
+         
+     }
+     @media screen and (max-width:822px){
+         .clicked{max-height: 2600px !important;}
+     }
+     @media screen and (max-width:743px){
+         .belief{border-left:1px solid white;}
+         #categories{height: 2300px !important; }
+     }
+     
+     @media screen and (max-width:700px){
+     #space{display: none;} 
+     #fpart, #spart{font-size: 0.6em;}
+     #quote-content{height: 380px !important; width: 450px !important;}
+     .clicked{max-height: 2800px !important;}
+     
+     }
+     @media screen and (max-width:652px){
+         .clicked{max-height: 3200px !important;}
+     }
+     @media screen and (max-width:600px){
+         .nav{height:550px}
+         #space{display: none;}
+         #fpart, #spart{font-size: 0.6em;}
+         
+         
+     }
+     @media screen and (max-width:539px){
+         .clicked{max-height: 3600px !important;}
+     }
+     @media screen and (max-width:425px){
+         .nav{font-size: 0.8em !important;}
+         .nav-content ul{margin-right: 0px !important;}
+         #latest-quote > div {font-size: 2em !important;}
+         #quote-content{height: 340px !important; width: 265px !important;}
+         .domain-name{font-size: 5em !important; margin-top: 100px !important;}
+         .cat{width: 260px !important; height: 720px !important;}
+         #categories{height: 3090px !important;}
+         .clicked{max-height: 10000px !important; font-size: 1.3em !important;}
+        #header{font-size: 1em !important;}
+        .container{height: 450px !important;}
+        .heads:hover{font-size: 1.9em !important;}
+
+         }
+     
+     @media screen and (max-width:400px){
+         .nav{font-size: 0.8em !important;}
+         .nav-content ul{margin-right: 0px !important;}
+         #latest-quote > div {font-size: 2em !important;}
+         #quote-content{height: 340px !important; width: 265px !important;}
+         .domain-name{font-size: 5em !important; margin-top: 100px !important;}
+         .cat{width: 260px !important; height: 720px !important;}
+         #categories{height: 3090px !important;}
+         .clicked{max-height: 10000px !important; font-size: 1.3em !important;}
+        #header{font-size: 1em !important;}
+        .container{height: 450px !important;}
+        .heads:hover{font-size: 1.9em !important;}
+
+         }
+         
+     #header{
+         font-size: 2em; 
+     }
+     .container{
+         height: 650px;
+     }
+     #mar{
+         margin-left: 100px;
+     }
+     .domain-name{
+         font-size: 9em; width: 100%;
+     text-align: center; margin-top: 10%; position: relative;}
+     #fpart{
+         color:red ; animation-name: anime1;
+         animation-duration: 2s ; position: relative;
+     }
+     #spart{
+         color:cornflowerblue; 
+     animation-name: anime2; animation-duration: 2s; position: relative; 
+     }
+     .latest{transition:ease-in ;  transition-duration: 1s;
+         margin-top: 120px; width: 100%; height: 700px; text-align: center;
+     }
+     .latest > h1{
+         text-indent: 20px; text-align: left !important;
+     }
+     .latest-content{
+         margin-top: 200px; 
+         
+     }
+     #latest-quote .fa-solid {
+         font-size: 7em; cursor: pointer; 
+     }
+     
+     .fa-solid:active{
+         color: rgb(224, 96, 187); 
+     }
+     #latest-quote > div{
+         font-size: 3em;  text-indent: 30px; 
+     }
+     #quote-content{ display: inline-block; 
+        width: 1300px;   border: 0px solid green; vertical-align: top; text-align: center;  height: 300px; animation-duration: 1s; 
+     }
+     .space{
+         height: 300px;  
+     }
+     .categories{
+         max-width: 1650px; height: 770px; margin-top: 45px; 
+     }
+     .cat-container{
+         width: 100%; height: 500px; text-align: center; margin-top: 100px; }
+     .cat{
+         width: 360px; height:100%;  display:inline-block; font-size: 1.5em; overflow-wrap:break-word; overflow-x: auto; word-spacing: 3px; font-weight: 700;  border-right: 1px solid white; 
+     }
+     .inspirational{border-left:1px solid white;}
+     .heads{
+         margin-top: 30px; transition: ease 0.3s; margin-bottom: 40px; font-size: 1.5em; font-weight: 1; 
+     }
+     .heads > a{text-decoration: none;}
+     
+     .heads:hover{
+          cursor: pointer; font-size: 2.4em;
+     }
+     .num1:hover a{
+         color: red;
+     }
+     .num2:hover a{
+         color:cornflowerblue;
+     }
+     .heads:hover .fa-lightbulb{
+         color: yellow;
+     }
+     .heads:hover .fa-heart{
+         color: red;
+     }
+     .heads:hover .fa-palette{
+         color: rgb(207, 22, 210);
+     }
+     .heads:hover .fa-brain{
+         color: rgb(223, 204, 125);
+     }
+     .catinside{
+         margin: 0px 40px; word-spacing: 5px;
+     }
+     .clicked{
+         max-width: 1500px; max-height: 1800px; font-size: 2em; text-align: left; overflow-wrap: break-word; border: 0px solid white;
+     }
+     #inspired{
+           height: 100%;
+     }
+     .clicked > h1{
+         text-indent: 15px;
+     }
+     .quote{max-width: 1400px; border: 0px solid white; margin-left: 20px; font-weight: 600; letter-spacing: 2px;}
+     
+     #beliefed{height: 100%;}
+     #arted{}
+     #brained{height: 100%;}
+     #about{
+         width: 100%; text-align: center; height: 100px; border-top: 1px solid white ; margin-top: 50px;
+     }
+     #about > p{
+         margin-top: 20px; font-size:1.5em;
+     }
+     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2d56a8f116.js" crossorigin="anonymous"></script>
+</head>
+<body onload="cam()" ><div class="nav"><div class="nav-content"><ul>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#categories">CATEGORIES</a></li>
+    <li><a href="#latest">LATEST</a></li>
+    <li><a href="#">HOME</a></li>
+    
+</ul></div>  <div style="display: none;" id="navbar2" class="nav-content"><ul>
+    <li><a href="#">HOME</a></li>
+    <li><a href="#latest">LATEST</a></li>
+    <li><a href="#categories">CATEGORIES</a></li>
+    <li><a href="#about">ABOUT</a></li>
+    
+</ul></div>   </div>
+<div class="container">
+<div id="header"><h1>Refresh Your Life With <br><span id="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> The Most Astonishing Quotes Daily :)</h1></div>
+<div class="domain-name"><span id="fpart">&ldquo;Quotes</span>.<span id="spart">Com&rdquo;</span></div>
+</div>
+<div class="latest" id="latest"><h1>Latest:</h1><div class="latest-content" >
+<span id="latest-quote"><i id="left" class="fa-solid fa-angle-left"></i><i id="up" class="fa-solid fa-angle-up" style="display: none;"></i> <div id="quote-content" onload="cam()"></div> <i id="right" class="right fa-solid fa-angle-right " ></i><i id="down" class="right fa-solid fa-angle-down" style="display: none;" ></i></span></div></div>
+<div class="space" style="display: none;"></div>
+
+<div id="categories" class="categories"><h1>Categories:</h1>
+<div class="cat-container"><div class="cat inspirational"><div class="heads num1"><a id="foption" href="#inspired">Inspirational <i class="fa-regular fa-lightbulb"></i></a> </div><div class="catinside"> Well, we are living in times, where there is literally stress around every corner. Even with the best efforts, stress cannot be avoided, so we all seek new and innovative ways of escape, or to simply handle this pressure.One of them which is reading inspirational quotes.</div>
+
+</div><div class="cat belief"><div class="heads num2"><a href="#beliefed" id="soption">Belief <i class="fa-regular fa-heart"></i></a> </div><div class="catinside"> What you believe drives what you do, and what you do determines what you achieve. When your belief is strong, you perform smarter, better, and with greater resilience. This is true everywhere: business, athletics, education, and personal relationships.</div>
+
+</div><div class="cat art"><div class="heads num1"><a href="#arted" id="toption">Art <i class="fa-solid fa-palette"></i></a> </div><div class="catinside"> How important is art in the world?
+Art helps you process your emotions and understand your surroundings. It allows you to see life from a different perspective and it makes you feel alive. Art has always been an important part of human society since the beginning of time.</div>
+</div><div class="cat brain"><div class="heads num2"><a href="#brained" id="f4option">Brain <i class="fa-solid fa-brain"></i></a> </div><div class="catinside">
+The human brain is the command centre for the nervous system and enables thoughts, memory, movement, and emotions by a complex function that is the highest product of biological evolution. Maintaining a healthy brain during one's life is the uppermost goal in pursuing health and longevity.</div></div></div>
+</div>
+<div class="clicked" style="display: none;">
+    <div id="inspired" class="option1" style="display: none;"><h1><span style="color:red;">Inspirational</span> <span style="color: cornflowerblue;">Quotes</span> :</h1>
+    <p class="quote">1 . "When you have a dream, you've got to grab it and never let go." 
+        — Carol Burnet</p>
+        <p class="quote">2 . "Keep your face always toward the sunshine, and shadows will fall behind you."
+            — Walt Whitman</p>
+        <p class="quote">3 . "Be courageous. Challenge orthodoxy. Stand up for what you believe in. When you are in your rocking chair talking to your grandchildren many years from now, be sure you have a good story to tell."
+            — Amal Clooney</p>
+        <p class="quote">4 . "You make a choice: continue living your life feeling muddled in this abyss of self-misunderstanding, or you find your identity independent of it. You draw your own box."
+            — Duchess Meghan</p>
+        <p class="quote">5 .  "I just want you to know that if you are out there and you are being really hard on yourself right now for something that has happened ... it's normal. That is what is going to happen to you in life. No one gets through unscathed. We are all going to have a few scratches on us. Please be kind to yourselves and stand up for yourself, please."
+            — Taylor Swift</p>
+        <p class="quote">6 . "You are never too old to set another goal or to dream a new dream."
+            — Malala Yousafzai</p>
+        <p class="quote">7 . "You define your own life. Don't let other people write your script."
+            — Oprah Winfrey</p>
+        <p class="quote">8 . "At the end of the day, whether or not those people are comfortable with how you're living your life doesn't matter. What matters is whether you're comfortable with it."
+            — Dr. Phil</p>
+        <p class="quote">9 . "If you make your internal life a priority, then everything else you need on the outside will be given to you and it will be extremely clear what the next step is."
+            — Gabrielle Bernstein</p>
+        <p class="quote">10 . "You don't always need a plan. Sometimes you just need to breathe, trust, let go and see what happens."
+            — Mandy Hale</p>
+        <p class="quote">12 . "You can be everything. You can be the infinite amount of things that people are." — Kesha</p>
+        <p class="quote">13 . “We cannot solve problems with the kind of thinking we employed when we came up with them.” — Albert Einstein
+        </p>
+        <p class="quote">14 . “Learn as if you will live forever, live like you will die tomorrow.” — Mahatma Gandhi
+        </p>
+    <p class="quote">15 . “When you give joy to other people, you get more joy in return. You should give a good thought to happiness that you can give out.”— Eleanor Roosevelt</p>
+    
+    
+    
+    </div>
+    <div id="beliefed" class="option2" style="display: none;">
+        <h1><span style="color: red;">Belief </span><span style="color: cornflowerblue;">Quotes</span> :</h1>
+        <p class="quote">1 . "Believe you can and you're halfway there."
+            - Theodore Roosevelt</p>
+        <p class="quote">2 . "Belief creates the actual fact."
+            — William James</p>
+        <p class="quote">3 . "Live your beliefs and you can turn the world around."
+            — Henry David Thoreau</p>
+        <p class="quote">4 . 
+            “Reality is that which, when you stop believing in it, doesn't go away.”
+            ― Philip K. Dick, I Hope I Shall Arrive Soon</p>
+        <p class="quote">5 . “The moment you doubt whether you can fly, you cease for ever to be able to do it.”
+            ― J. M. Barrie, Peter Pan</p>
+        <p class="quote">6 . “Never letting the competition define you. Instead, you have to define yourself based on a point of view you care deeply about.” – Tom Chappel</p>
+        <p class="quote">7 . “Never bend your head. Always hold it high. Look the world right in the eye.” – Helen Keller</p>
+        <p class="quote">8 . “Strength does not come from physical capacity. It comes from an indomitable will.” – Mahatma Gandhi</p>
+        <p class="quote">9 . “I love the man that can smile in trouble, that can gather strength from distress, and grow brave by reflection. ‘Tis the business of little minds to shrink, but he whose heart is firm, and whose conscience approves his conduct, will pursue his principles unto death.” – Thomas Paine</p>
+        <p class="quote">10 . "Believe in your ability to be successful in the things you have a passion for. These are God given gifts for you to use." –Catherine Pulsifer</p>
+        <p class="quote">11 . Believe and have trust and faith that you are really capable of doing what you want to do. –Jamie Anderson</p>
+        <p class="quote">12 . "Do not believe that you will reach your destination without leaving the shore." –Chinese Proverb</p>
+        <p class="quote">13 . "The ego is really that part of us that believes that we are a separate being, alone in time and space and trying to make it through life." -Helen Hamilton</p>
+        <p class="quote">14 . "When we find out that someone believes in us, it is powerful. Notice the word we in the word power. We are in power." –David DeNotaris</p>
+        <p class="quote">15 . "Changing your negative beliefs is the first step in the transformation process that will really make a difference in your life." –Anita Foley</p>
+        <p class="quote">16 . "beliefs are important for they shape who we are, but our identity is revealed not through our beliefs or our talk, but through our actions." –Thomas Ingram</p>
+    </div>
+    <div id="arted" class="option3" style="display: none;"><h1><span style="color: red;">Art</span><span style="color:cornflowerblue;"> Quotes</span> :</h1>
+    <p class="quote">1 . Art is a line around your thoughts.
+        ―  Gustav Klimt</p>
+    <p class="quote">2 . While drawing I discover what I really want to say. 
+        ―  Dario Fo</p>
+    <p class="quote">3 . Art is never finished, only abandoned.
+        ―  Leonardo da Vinci</p>
+    <p class="quote">4 . In drawing, one must look for or suspect that there is more than is casually seen.
+        ―  George Bridgman</p>
+    <p class="quote">5 . As I work at my drawings, day after day, what seemed unattainable before is now gradually becoming possible. Slowly, I'm learning to observe and measure. I don't stand quite so helpless before nature any longer.
+        ―  Vincent van Gogh in ’Lust for Life’</p>
+    <p class="quote">6 . A work of art which did not begin in emotion is not art.
+        ―  Paul Cezanne</p>
+    <p class="quote">7 . If people only knew how hard I work to gain my mastery. It wouldn't seem so wonderful at all.
+        ―  Michelangelo</p>
+    <p class="quote">8 . There is no must in art because art is free.
+        ―  Wassily Kandinsky</p>
+    <p class="quote">9 . To my mind a picture should be something pleasant, cheerful and pretty. There are too many unpleasant things in life as it is, without creating still more of them.
+        ―  Pierre-Auguste Renoir</p>
+    <p class="quote">10 . A true masterpiece does not tell everything.
+        ―  Albert Camus</p>
+    <p class="quote">11 . Every artist was first an amateur.
+        ―  Ralph Waldo Emerson</p>
+    <p class="quote">12 . I started painting as a hobby when I was little. I didn’t know I had any talent. I believe talent is just a pursued interest. Anybody can do what I do.
+        ―  Bob Ross</p>
+    <p class="quote">13 . It’s not what you look at that matters, it’s what you see.
+        ―  Henry David Thoreau</p>
+    <p class="quote">14 . Artists are just children who refuse to put down their crayons.
+        ―  Al Hirschfeld</p>
+    <p class="quote">15 . It is only when we are no longer fearful that we begin to create.
+        ―  J. M. W. Turner</p>
+    <p class="quote">16 . Success is a worn down pencil.
+        ―  Robert Rauschenberg</p>
+    
+    
+    
+    </div>
+    <div id="brained" class="option4" style="display: none;"><h1><span style="color:red;">Brain</span><span style="color:cornflowerblue;"> Quotes</span> :</h1>
+    <p class="quote">1 . 'A baby has brains, but it doesn't know much. Experience is the only thing that brings knowledge, and the longer you are on earth the more experience you are sure to get.”
+
+        – L. Frank Baum</p>
+    <p class="quote">2 . 'The emotional brain responds to an event more quickly than the thinking brain.'
+
+        – Daniel Goleman</p>
+    <p class="quote">3 . 'Beauty you're born with, but brains you earn.'
+
+        – Jay Kristoff</p>
+    <p class="quote">4 . 'The brain is a muscle of busy hills, the struggle of unthought things with things eternally thought.'
+
+        – Joyce Carol Oates</p>
+    <p class="quote">5 .  'A brain was only capable of what it could conceive, and it couldn’t conceive what it had never experienced.'
+
+        – Graham Greene</p>
+    <p class="quote">6 . 'I not only use all the brains that I have but all I can borrow.'
+
+        – Woodrow Wilson.</p>
+    <p class="quote">7 . 'I shall ask for brains instead of a heart; for a fool would not know what to do with a heart if he had one.'
+
+        – L. Frank Baum</p>
+    <p class="quote">8 . 'The great events of the world take place in the brain.'
+
+        – Oscar Wilde</p>
+    <p class="quote">9 . 'If the human brain were so simple that we could understand it, we would be so simple that we couldn’t.'    – Emerson M. Pugh.
+
+    </p>
+    <p class="quote">10 . 'Follow your heart but take your brain with you.'
+
+        – Alfred Adle</p>
+    <p class="quote">11 . 'The brain is a wonderful organ. It starts working the moment you get up in the morning and does not stop until you get into the office.'
+
+        – Robert Frost</p>
+    <p class="quote">12 . 'I consider that a man's brain originally is like a little empty attic, and you have to stock it with such furniture as you choose.'
+
+        – Arthur Conan Doyle.</p>
+    <p class="quote">13 . 'Overall, the human brain is the most complex object known in the universe - known, that is, to itself.'
+
+        – E. O. Wilson</p>
+    <p class="quote">14 . 'Don't let your brain interfere with your heart.'
+
+        – Albert Einstein.</p>
+    <p class="quote">15 . 'The softest, freest, most pliable and changeful living substance is the brain – the hardest and most iron-bound as well.'
+
+        – Charlotte Perkins Gilman.</p>
+    <p class="quote">16 . 'I shall take the heart. [...] For brains do not make one happy, and happiness is the best thing in the world.'
+
+        – L. Frank Baum</p>
+    <p class="quote">17 . 'The brain is wider than the sky.'
+
+        – Emily Dickinson</p>
+    </div>
+     <div style="text-align: center; font-size: 2em ; margin-top: 20px; " ><a href="#categories"><i class="fa-solid fa-angles-up"></i></a></div>
+</div>
+<div id="about"><p>ALL RIGHTS RESERVED &copy; 2022</p></div>
+
+
+
+
+ <script>const right = document.getElementById("right");
+    const down = document.getElementById("down");
+    const left = document.getElementById("left");
+    const up = document.getElementById("up");
+    const quote_content = document.getElementById("quote-content");
+    const html = document.querySelector("html");
+    const inspired = document.getElementById("inspired");
+    const beliefed = document.getElementById("beliefed");
+    const arted = document.getElementById("arted");
+    const brained = document.getElementById("brained");
+    const clicked = document.querySelector(".clicked");
+    const foption = document.getElementById("foption");
+    const soption = document.getElementById("soption");
+    const toption = document.getElementById("toption");
+    const f4option = document.getElementById("f4option");
+    const option1 = document.querySelector(".option1");
+    const option2 = document.querySelector(".option2");
+    const option3 = document.querySelector(".option3");
+    const option4 = document.querySelector(".option4");
+    
+    
+    const latest_quotes = ["Folks are usually about as happy as they make their minds up to be. <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &minus;Abraham Lincoln","Gratitude makes sense of our past, brings peace for today, and creates a vision for tomorrow. <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &minus;Melody Beattie", "We cannot solve our problems with the same thinking we used when we created them.  <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &minus;Albert Einstein", "The only true wisdom is in knowing you know nothing. <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &minus;Socrates", "Everything has beauty, but not everyone sees it. <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &minus;Confusius"]
+    
+    function cam(){
+        quote_content.innerHTML = latest_quotes[0];
+    }
+    {let i = 1;
+        var interval;
+        
+    
+    right.addEventListener("click", ()=>{
+    
+        quote_content.innerHTML = latest_quotes[i]
+        i++
+        if(i > latest_quotes.length - 1){
+            i = 0
+        }
+        
+        
+    })
+    left.addEventListener("click", ()=>{
+        quote_content.innerHTML = latest_quotes[i]
+        i--
+        if(i < 0){
+            i = 4
+        } 
+    
+    })
+    down.addEventListener("click", ()=>{
+        
+        quote_content.innerHTML = latest_quotes[i]
+        i++
+        if(i > latest_quotes.length - 1){
+            i = 0
+        }
+        
+        
+    })
+    up.addEventListener("click", ()=>{
+        quote_content.innerHTML = latest_quotes[i]
+        i--
+        if(i < 0){
+            i = 4
+        }
+    
+    })
+    }
+    foption.onclick = function(){
+        clicked.style.display = "block"
+        option1.style.display = "block"
+        option2.style.display = "none"
+        option3.style.display = "none"
+        option4.style.display = "none"
+    
+    }
+    soption.onclick = function(){
+        clicked.style.display = "block"
+        option1.style.display = "none"
+        option2.style.display = "block"
+        option3.style.display = "none"
+        option4.style.display = "none"
+        
+    }
+    toption.onclick = function(){
+        clicked.style.display = "block"
+        option1.style.display = "none"
+        option2.style.display = "none"
+        option3.style.display = "block"
+        option4.style.display = "none"
+    }
+    f4option.onclick = function(){
+        clicked.style.display = "block"
+        option1.style.display = "none"
+        option2.style.display = "none"
+        option3.style.display = "none"
+        option4.style.display = "block"
+    }
+    
+    </script>
+</body>
+</html>
